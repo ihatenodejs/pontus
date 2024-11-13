@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'RainyHearts';
+    src: url('/fonts/rainyhearts.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Daydream';
+    src: url('/fonts/Daydream.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'RainyHearts';
+}
+
+h1 {
+    font-family: 'Daydream';
+    font-size: x-large;
+}
+
+.title {
+    font-family: 'Daydream';
+}
+
+.container {
+    display: flex;
+    height: 97.5vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 17%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.sidebar::-webkit-scrollbar { /* this hides scroll bar on webkit browsers */
+    display: none; /*            people... could you just not use those in the first place?! */
+}
+
+.sidebar a {
+    display: block;
+    margin: 7px 0;
+}
+
+.main-content {
+    width: 80%;
+    overflow-y: auto;
+    padding: 20px;
+    padding-top: 0;
+    box-sizing: border-box;
+}
+
+.sb-itm {
+    padding: 20px;
+    padding-top: 10px;
+    background-color: #f0f0f0;
+    margin-bottom: 5%;
+}
+
+.bt-section {
+    padding: 20px;
+    padding-top: 10px;
+    background-color: #f0f0f0;
+    margin-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bt-section img,
+.bt-section a {
+    display: inline-block;
+    margin: 0;
+}
+
+.contained-blinkie {
+    width: 100%;
+}
+
+.contained-button img {
+    width: 44%;
+}    
+
+
+.fac img {
+    padding-top: 20px;
+}
+
+
+* {cursor: url(https://cur.cursors-4u.net/cursors/cur-11/cur1055.ani), url(https://cur.cursors-4u.net/cursors/cur-11/cur1055.png), auto !important;}
