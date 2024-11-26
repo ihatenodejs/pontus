@@ -9,22 +9,26 @@ There are two self-hosted options, depending on your situation. For my purposes,
 1. **Use self script**
 The `self` script can help you establish a public/ folder, where code can be served to. At this time, it doesn't do anything but move the files over as of now. This script is only supported on Linux hosts.
 
-To use the self script, you must do the following:
+    To use the self script, you must do the following:
 
-**a.**  Allow execution of self script
+    **a.**  Allow execution of self script
 
-```shell
-chmod +x self
-```
+    ```shell
+    chmod +x self
+    ```
 
-**b.** Start server
+    **b.** Start server
 
-```shell
-./self start
-```
+    ```shell
+    ./self start
+    ```
 
-You may also use `./self help` (this script does not provide therapy services) to view other available commands.
+    You may also use `./self help` (this script does not provide therapy services) to view other available commands.
 
 2. **Use the static files**
 
-You may also opt to copy the src/ folder to another location, such as /var/www/html, so it can be served static with a web server such as Apache2 or NGINX.
+    You may also opt to copy the src/ folder to another location, such as /var/www/html, so it can be served static with a web server such as Apache2 or NGINX.
+
+# Serve custom files
+
+If you would like to host your own files, simply place them in `./src/archives`, and they will be served at the same location mine are. Keep in mind, you may not use the same directory structure, and will have to update the menu links.

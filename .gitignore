@@ -3,3 +3,6 @@
 
 # public directory
 public/
+
+# archives directory
+src/archives/
