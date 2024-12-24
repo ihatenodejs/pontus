@@ -2,6 +2,8 @@
 [![Last Update](https://img.shields.io/badge/last_update-16_Dec_2024-blue)](#)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 
+<a href="https://512kb.club"><img src="https://512kb.club/assets/images/orange-team.svg" alt="a proud member of the orange team of 512KB club" /></a>
+
 A website for my online self
 
 # How to self-host
