@@ -35,3 +35,6 @@ The `self` script can help you establish a public/ folder, where code can be ser
 # Serve custom files
 
 If you would like to host your own files, simply place them in `./src/archives`, and they will be served at the same location mine are. Keep in mind, you may not use the same directory structure, and will have to update the menu links.
+
+# To-Do
+- [ ] Implement minification
