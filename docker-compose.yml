@@ -1,0 +1,10 @@
+services:
+  pontus-web:
+    build: .
+    image: pontus-web:latest
+    restart: always
+    ports:
+      - "2280:80"
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./src:/usr/share/nginx/html
