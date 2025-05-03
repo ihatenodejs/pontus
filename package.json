@@ -3,9 +3,8 @@
   "version": "1.1.0",
   "description": "A website for my online self",
   "keywords": [
-    "css",
-    "html",
-    "js",
+    "docker",
+    "php",
     "website"
   ],
   "repository": {
@@ -20,7 +19,6 @@
     "minify": "bun run minify:css"
   },
   "devDependencies": {
-    "html-minifier-terser": "^7.1.0",
     "csso-cli": "^4.0.0"
   }
 }
