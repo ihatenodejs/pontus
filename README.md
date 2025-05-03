@@ -2,7 +2,7 @@
 
 [![PHP](https://img.shields.io/badge/php-%23777BB4.svg?&logo=php&logoColor=white)](https://www.php.net)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
-[![minify.yml](https://git.pontusmail.org/aidan/pontus/actions/workflows/minify.yml/badge.svg)](https://git.pontusmail.org/aidan/pontus/actions?workflow=minify.yaml)
+[![minify.yaml](https://git.pontusmail.org/aidan/pontus/actions/workflows/minify.yaml/badge.svg)](https://git.pontusmail.org/aidan/pontus/actions?workflow=minify.yaml)
 
 [![a proud member of the orange team of 512KB club](https://512kb.club/assets/images/orange-team.svg)](https://512kb.club)
 
