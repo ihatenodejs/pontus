@@ -4,5 +4,10 @@
 # public directory
 public/
 
-# archives directory
-src/archives/
+# archives
+src/archives/files/
+
+# bun/node
+bun.lock*
+node_modules/
+package-lock.json

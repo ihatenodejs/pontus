@@ -1,0 +1,26 @@
+{
+  "name": "pontus",
+  "version": "1.1.0",
+  "description": "A website for my online self",
+  "keywords": [
+    "css",
+    "html",
+    "js",
+    "website"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://git.pontusmail.org/aidan/pontus"
+  },
+  "license": "CC0-1.0",
+  "author": "aidan",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify:css": "find src/css/ -name '*.css' ! -name '*min*' -exec sh -c 'csso \"$0\" --output \"${0%.css}.min.css\"' {} \\;",
+    "minify": "bun run minify:css"
+  },
+  "devDependencies": {
+    "html-minifier-terser": "^7.1.0",
+    "csso-cli": "^4.0.0"
+  }
+}

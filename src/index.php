@@ -7,44 +7,9 @@
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
+    <!-- YOU CARE ABOUT MY CODE?! -->
     <div class="container">
-        <div class="sidebar">
-            <div class="sb-itm">
-                <h1 style="font-size: medium;">menu</h1>
-                <b>home</b>
-                <a href="/links">links</a>
-            </div>
-            <div class="sb-itm">
-                <h1 style="font-size: medium;">archives</h1>
-                <a href="/archives/android/modules/">android magisk modules</a>
-                <a href="/archives/ads/political">political advertising</a>
-                <a href="/archives/ads/college">college advertising</a>
-                <a href="/archives/videos/short-form/">short-form videos</a>
-                <a href="/archives/videos/long-form/">long-form videos</a>
-                <a href="/archives/android/apps/">android apps</a>
-                <a href="/archives/updates/">updates</a>
-                <a href="/archives/img/">images</a>
-            </div>
-            <div class="sb-itm">
-                <h1 style="font-size: medium;">other stuff</h1>
-                <a href="https://blog.aidxn.fun">blog</a>
-                <a href="https://aidxn.cc">main site</a>
-                <a href="https://aidxn.fun">alternate site</a>
-                <a href="https://tilde.club/~lxu">tilde.club page</a>
-                <a href="https://androidintegrity.org">android integrity</a>
-            </div>
-            <div class="bt-section">
-                <img src="img/blinkies/cantlivewithout.gif" class="contained-blinkie" style="padding-top: 15px;" alt="I can't live without a computer">
-                <img src="img/buttons/1advise.gif" alt="Parental Advisory: I say fuck a lot">
-                <a href="https://www.mozilla.org/en-US/firefox/"><img src="img/buttons/firefoxnow.gif" alt="Firefox Now"></a>
-                <img src="img/buttons/1chrome.gif" alt="Google Chrome is Evil">
-                <a href="https://debian.org/"><img src="img/buttons/debian.gif" class="contained-button" alt="Powered by Debian"></a>
-                <img src="img/buttons/bestviewedcomp.gif" alt="Best viewed with a computer">
-                <img src="img/buttons/pdmark.png" class="contained-button" alt="Public domain">
-                <a href="https://t.me/iusearchbtw42"><img src="img/buttons/telegram.png" class="contained-button" alt="Telegram"></a>
-                <img src="img/buttons/gentoo-button.png" class="contained-button" alt="Public domain">
-            </div>
-        </div>
+        <?php include 'includes/sidebar.php'; ?>
         <div class="main-content">
             <div id="header">
                 <h1>

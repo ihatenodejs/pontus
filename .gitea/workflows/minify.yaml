@@ -14,24 +14,18 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
 
       - name: Install minification tools
         run: |
-          npm install -g html-minifier-terser csso-cli
-
-      - name: Minify HTML files
-        run: |
-          find src/ -name '*.html' ! -name '*min*' -exec sh -c 'html-minifier-terser --collapse-whitespace --remove-comments --minify-js true --minify-css true -o "${0%.html}.min.html" "$0"' {} \;
+          bun install
 
       - name: Minify CSS files
         run: |
-          find src/css/ -name '*.css' ! -name '*min*' -exec sh -c 'csso "$0" --output "${0%.css}.min.css"' {} \;
+          bun run minify:css
 
       - name: Commit and push changes
         env:
@@ -42,5 +36,5 @@ jobs:
           git config --global user.email "git@pontusmail.org"
           git remote set-url origin https://${USERNAME_GITEA}:${TOKEN_GITEA}@git.pontusmail.org/aidan/pontus.git
           git add .
-          git commit -m "[bot] Minifying HTML and CSS automatically"
+          git commit -m "[bot] Minifying CSS automatically"
           git push origin main

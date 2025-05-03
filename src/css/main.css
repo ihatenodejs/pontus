@@ -85,11 +85,29 @@ h1 {
 
 .contained-button img {
     width: 44%;
-}    
+}
 
 
 .fac img {
     padding-top: 20px;
+}
+
+.head-img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.file-tb {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.file-tb th,
+.file-tb td {
+    border: 1px solid #000;
+    padding-left: 10px;
+    overflow-wrap: break-word;
 }
 
 
