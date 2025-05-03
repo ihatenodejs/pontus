@@ -36,5 +36,9 @@ jobs:
           git config --global user.email "git@pontusmail.org"
           git remote set-url origin https://${USERNAME_GITEA}:${TOKEN_GITEA}@git.pontusmail.org/aidan/pontus.git
           git add .
-          git commit -m "[bot] Minifying CSS automatically"
-          git push origin main
+          if git diff --staged --quiet; then
+            echo "[i] No changes to commit"
+          else
+            git commit -m "[bot] Minifying CSS automatically"
+            git push origin main
+          fi
