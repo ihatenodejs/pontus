@@ -13,7 +13,7 @@ function loadMetadata($path) {
     return [];
 }
 
-function listDirectory($path, $basePath = '') {
+function listDirectory($path, $basePath = '', $relativePath = '') {
     $files = glob($path . '/*');
     sort($files);
     $output = '';
@@ -24,8 +24,10 @@ function listDirectory($path, $basePath = '') {
         $filename = basename($file);
         if ($filename === 'md.json') continue;
         
-        $relativePath = str_replace($basePath, '', $file);
-        $depth = substr_count($relativePath, '/') - 1;
+        $fileRelativePath = str_replace($basePath, '', $file);
+        $currentRelativePath = $relativePath . '/' . $filename;
+        $webPath = '/archives/files/' . $currentRelativePath;
+        $depth = substr_count($fileRelativePath, '/') - 1;
         $padding = $depth * 20;
         
         $output .= '<tr class="level-' . $depth . '" data-path="' . htmlspecialchars($file) . '">';
@@ -44,10 +46,10 @@ function listDirectory($path, $basePath = '') {
             $output .= '<td>' . formatFileSize($totalSize) . '</td>';
             $output .= '</tr>';
             
-            $output .= listDirectory($file, $basePath);
+            $output .= listDirectory($file, $basePath, $currentRelativePath);
         } else {
-            $output .= '<td><div class="file-name" style="padding-left: ' . $padding . 'px"><a href="' . $file . '"><img src="/img/gif/dl.gif" alt="download" width="16px" style="vertical-align: middle;"></a></div></td>';
-            $output .= '<td><div class="file-name" style="padding-left: ' . $padding . 'px"><a href="' . $file . '">' . $filename . '</a></div></td>';
+            $output .= '<td><div class="file-name" style="padding-left: ' . $padding . 'px"><a href="' . $webPath . '"><img src="/img/gif/dl.gif" alt="download" width="16px" style="vertical-align: middle;"></a></div></td>';
+            $output .= '<td><div class="file-name" style="padding-left: ' . $padding . 'px"><a href="' . $webPath . '">' . $filename . '</a></div></td>';
             $output .= '<td>' . ($metadata[$filename]['description'] ?? 'no description available, sorry!') . '</td>';
             $output .= '<td>' . formatFileSize(filesize($file)) . '</td>';
             $output .= '</tr>';
@@ -59,7 +61,7 @@ function listDirectory($path, $basePath = '') {
 
 function renderFileBrowser($title, $relativePath) {
     $docRoot = rtrim($_SERVER['DOCUMENT_ROOT'], '/');
-    $basePath = $docRoot . '/archives/files';
+    $basePath = $docRoot . '/archives/files/';
     $path = $basePath . '/' . $relativePath;
     ?>
     <div class="head-img">
@@ -74,7 +76,7 @@ function renderFileBrowser($title, $relativePath) {
             <th>description</th>
             <th>size</th>
         </tr>
-        <?php echo listDirectory($path, $path); ?>
+        <?php echo listDirectory($path, $path, $relativePath); ?>
     </table>
     <div class="head-img" style="margin-top: 10px;">
         <img src="/img/gif/alert.gif" alt="Animated warning icon" width="3%" style="vertical-align: middle;">
